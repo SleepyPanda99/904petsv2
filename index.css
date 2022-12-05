@@ -1,31 +1,39 @@
 body {
     color: #2b283a;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Besley', serif;
     margin: 0;
 }
 
 /* ----- TYPOGRAPHY ----- */
 
-h1, 
-h3 {
-    margin: 0;
+.subheading, 
+h2,
+h1,
+h3,
+h5 {
+    font-family: 'Bebas Neue', cursive;
 }
+
+
 
 h1 {
+    margin: 0;
     color: #E4CD5C;
-    font-size: 1.75rem;
+    font-size: 2.75rem;
     text-align: center;
 }
 
-h2 {
+h2, h5 {
     color: #025848;
-    font-size: 1.375rem;
-    margin-top: 0;
+    font-size: 2.375rem;
     text-align: center;
+    margin: 1em;
 }
 
-h3 {
-    font-size: 1.25rem;
+h4 {
+    font-size: 2.25rem;
+    font-family: 'Besley', serif;
+    font-style: italic;
 }
 
 p {
@@ -34,7 +42,7 @@ p {
 
 .subheading {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     color: #E4CD58;
     margin: 10px;
 }
@@ -84,8 +92,9 @@ p {
 
 a {
     color: #E4CD5C;
-    text-decoration: underline dotted; 
+    text-decoration: none; 
 }
+
 
 a:hover, 
 a:active {
@@ -93,6 +102,7 @@ a:active {
 }
 
 .btn {
+    font-family: 'Pathway Gothic One', sans-serif;
     font-size: 1.125rem;
     text-align: center;
     font-weight: 500;
@@ -184,14 +194,20 @@ footer {
     background: #025848;
 }
 
+.widget {
+    margin-bottom: 10px;
+}
+
 /* ----- NAVIGATION ----- */
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.125rem;
-    padding: 0.85em 0;
+    font-size: 1.5rem;
+    padding: 0.85em 0.25em;
     display: block;
+    font-family: 'Pathway Gothic One', sans-serif;
+
 }
 
 ul {
@@ -206,18 +222,41 @@ ul {
     header,
     h2,
     h3,
+    h4,
     p {
         text-align: center;
     }
-
-    nav {
-        margin-top: 1.5em;
+  
+    
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: .5em;
+        letter-spacing: .5px;
     }
- 
+    h4 {
+        font-size: 1.25em;
+    }
+    h5 {
+        font-size: 2em;
+    }
+    nav { 
+        margin-top: 1em;
+        width: 175px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+   nav a {
+       font-size: 1.25rem;
+   }
     li:not(:last-child) {
         border-bottom: 1px dotted #a190b6;
     }  
 }
+    .btn {
+        width: 125px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
 @media (min-width: 768px) {
     header,
@@ -237,24 +276,35 @@ ul {
     }
     
     nav li {
-        margin-left: 1.25em;
+        margin-left: 3em;
+        font-size: .25em;
+       
     }
     
     .btn {
         display: inline-block;
         margin-right: 0.5em;
+        font-size: 1.25rem;
     }
     
     h1 {
-        font-size: 2.25rem;
+        display: flex;
+        font-size: 3.5rem;
+        align-items: flex-start;
     }
     
-    h2 {
+    h2, h3 {
+        font-size: 3.25rem;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    
+    h4 {
         font-size: 1.75rem;
     }
     
     .subheading {
-        font-size: 1.1rem;
+        font-size: 1.75rem;
     }
     
     p {
@@ -299,7 +349,7 @@ textarea {
 #container-form {
   border: solid 3px #474544;
   max-width: 768px;
-  margin: 60px auto;
+  margin: 5px auto;
   position: relative;
 }
 
@@ -312,7 +362,7 @@ h2, {
   color: #474544;
   font-size: 32px;
   font-weight: 700;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -320,20 +370,19 @@ h2, {
 .underline {
   border-bottom: solid 2px #474544;
   margin: -0.512em auto;
-  width: 80px;
+  width: 60%;
 }
 
 .icon_wrapper {
-  margin: 50px auto 0;
+  margin-top: 25px;
   width: 100%;
 }
 
 .icon {
   display: block;
-  fill: #474544;
-  height: 50px;
-  margin: 0 auto;
-  width: 50px;
+  fill: #025848;
+  margin: auto;
+  width: 75px;
 }
 
 .email {
@@ -428,7 +477,9 @@ textarea {
   border: solid 2px #474544;
   color: #474544;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+   margin-right: auto;
+    margin-left: auto;
   font-family: 'Helvetica', Arial, sans-serif;
   font-size: 0.875em;
   font-weight: bold;
@@ -443,7 +494,7 @@ textarea {
 }
 
 #form_button:hover {
-  background: #474544;
+  background: #025848;
   color: #F2F3EB;
 }
 
@@ -452,19 +503,21 @@ textarea {
     margin: 20px auto;
     width: 95%;
   }
+  #form_button {
+      display: flex;
 }
 
 @media screen and (max-width: 480px) {
-  h1 {
-    font-size: 26px;
-  }
+
   
   .underline {
-    width: 68px;
+    width: 60%;
   }
   
   #form_button {
     padding: 15px 25px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -479,7 +532,7 @@ textarea {
   }
   
   .underline {
-    width: 53px;
+    width: 40%;
   }
   
   input[type='text'], [type='email'], select, textarea {
